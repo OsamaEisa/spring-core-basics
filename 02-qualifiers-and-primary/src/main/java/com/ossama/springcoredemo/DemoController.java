@@ -9,8 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
     // a private property for the dependency
     private Coach myCoach;
+//    @Autowired
+//    public DemoController(@Qualifier("tennisCoach") Coach theCoach) {
+//        // @Qualifier: to specify which class to use
+//        myCoach = theCoach;
+//    }
+
     @Autowired
-    public DemoController(@Qualifier("tennisCoach") Coach theCoach) {
+    public DemoController(Coach theCoach) {
         // @Qualifier: to specify which class to use
         myCoach = theCoach;
     }
